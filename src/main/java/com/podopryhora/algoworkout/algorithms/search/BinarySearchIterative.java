@@ -25,10 +25,11 @@ public final class BinarySearchIterative {
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (values[mid] == target) {
+            int midVal = values[mid];
+            if (midVal == target) {
                 return mid;
             }
-            if (values[mid] > target) {
+            if (midVal > target) {
                 end = mid - 1;
             } else {
                 start = mid + 1;

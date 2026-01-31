@@ -38,14 +38,15 @@ public final class BinarySearchRecursive {
 
         // Split the window and inspect the midpoint.
         int mid = start + (end - start) / 2;
+        int midVal = values[mid];
         // Return immediately on match.
-        if (values[mid] == target) {
+        if (midVal == target) {
             return mid;
         // Narrow the search to the left half.
-        } else if (values[mid] > target) {
+        } else if (midVal > target) {
             end = mid - 1;
         // Narrow the search to the right half.
-        } else if (values[mid] < target) {
+        } else {
             start = mid + 1;
         }
         // Recurse on the reduced window.
