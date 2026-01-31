@@ -62,7 +62,7 @@ Run tests with the Gradle wrapper:
 
 ### Algorithms
 - [x] Linear search
-- [ ] Binary search
+- [x] Binary search
 - [ ] Two pointers patterns
 - [ ] Sliding window
 - [ ] Prefix sum
