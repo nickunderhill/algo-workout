@@ -1,13 +1,15 @@
 # AGENTS
 
 ## Project Overview
+
 - Java algorithms practice project.
-- Java verfsion: 
+- Java verfsion:
 - Build tool: Gradle.
 - Source code: `src/main/java/com/podopryhora/algoworkout`.
 - Tests: `src/test/java/com/podopryhora/algoworkout` (JUnit 5).
 
 ## Conventions
+
 - Keep code simple and readable; prefer clear naming over cleverness.
 - Enforce Java 25 syntax and features.
 - Use ASCII only unless a file already contains Unicode.
@@ -17,10 +19,12 @@
 - Method Javadoc should stick to standard tags (`@param`, `@return`) unless there is a specific reason to add more.
 
 ## Testing
+
 - Run tests with `./gradlew test` when changes affect behavior.
 - Typical focus: search/algorithm edge cases and null/empty inputs.
 
 ## Notes for Agents
+
 - Avoid destructive git commands.
 - Prefer iterative solutions when recursion could risk stack depth.
 - Keep Javadoc concise and consistent across similar classes.

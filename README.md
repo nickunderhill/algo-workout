@@ -3,6 +3,7 @@
 A focused Java workspace for practicing data structures and algorithms for coding interviews.
 
 ## Project Structure
+
 ```
 .
 ├─ README.md
@@ -36,7 +37,9 @@ A focused Java workspace for practicing data structures and algorithms for codin
 ```
 
 ## Getting Started
+
 Run tests with the Gradle wrapper:
+
 ```
 ./gradlew test
 ```
@@ -44,6 +47,7 @@ Run tests with the Gradle wrapper:
 ## Implementation Plan (Easiest → Hardest)
 
 ### Data Structures
+
 - [ ] Arrays (custom dynamic array)
 - [ ] Singly linked list
 - [ ] Doubly linked list
@@ -61,6 +65,7 @@ Run tests with the Gradle wrapper:
 - [ ] Graph (adjacency list/matrix)
 
 ### Algorithms
+
 - [x] Linear search
 - [x] Binary search
 - [ ] Two pointers patterns
@@ -82,5 +87,6 @@ Run tests with the Gradle wrapper:
 - [ ] Advanced: segment tree, Fenwick tree
 
 ## Example
+
 - `LinearSearch` lives in `src/main/java/com/podopryhora/algoworkout/algorithms/search/LinearSearch.java`
 - Tests live in `src/test/java/com/podopryhora/algoworkout/algorithms/search/LinearSearchTest.java`
