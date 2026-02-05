@@ -50,7 +50,7 @@ Run tests with the Gradle wrapper:
 
 - [ ] Arrays (custom dynamic array)
 - [ ] Singly linked list
-- [ ] Doubly linked list
+- [x] Doubly linked list
 - [ ] Stack (array + linked list)
 - [ ] Queue (array + linked list)
 - [ ] Deque
@@ -75,6 +75,7 @@ Run tests with the Gradle wrapper:
 - [ ] Sorting: merge, quick, heap
 - [ ] Bit manipulation basics
 - [ ] Recursion patterns
+- [ ] LRU cache
 - [ ] Backtracking: subsets, permutations, combinations
 - [ ] Greedy: interval scheduling, activity selection
 - [ ] BFS / DFS
@@ -85,6 +86,12 @@ Run tests with the Gradle wrapper:
 - [ ] Dynamic programming: 2D (knapsack, LCS)
 - [ ] String algorithms: KMP, Rabin-Karp
 - [ ] Advanced: segment tree, Fenwick tree
+
+### Leetcode
+
+#### Medium 
+
+- [x] Longest Palindromic Substring
 
 ## Example
 
