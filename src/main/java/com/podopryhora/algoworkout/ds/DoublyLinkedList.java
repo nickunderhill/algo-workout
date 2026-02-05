@@ -2,6 +2,18 @@ package com.podopryhora.algoworkout.ds;
 
 import java.util.Objects;
 
+/**
+ * Doubly linked list is a data structure where each node has references to both previous and next nodes.
+ * It supports bidirectional traversal and O(1) updates given a node reference.”
+ *
+ * <p>Time complexity: add/remove at head or tail O(1), insert after a known node O(1),
+ * remove a known node O(1), find by value or index O(n).
+ *
+ * <p>Space complexity: O(n) for n nodes, plus O(1) auxiliary space per operation.
+ *
+ * <p>Useful when frequent insertions/removals near the ends or around known nodes
+ * are needed and bidirectional traversal is required.
+ */
 public class DoublyLinkedList<T> {
 
   private Node head;
