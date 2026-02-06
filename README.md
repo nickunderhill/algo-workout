@@ -87,14 +87,15 @@ Run tests with the Gradle wrapper:
 - [ ] String algorithms: KMP, Rabin-Karp
 - [ ] Advanced: segment tree, Fenwick tree
 
-### Leetcode
+### LeetCode problems
 
 #### Easy
 
-- [x] Two sum
+- [x] Two Sum
 - [x] Palindrome Number
 - [x] Fizz Buzz
-- [x] Array shuffle
+- [x] Array Shuffle
+- [x] Max Consecutive Ones
 
 #### Medium
 
