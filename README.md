@@ -89,6 +89,11 @@ Run tests with the Gradle wrapper:
 
 ### Leetcode
 
+#### Easy
+
+- [x] Two sum
+- [x] Palindrome Number
+
 #### Medium 
 
 - [x] Longest Palindromic Substring
