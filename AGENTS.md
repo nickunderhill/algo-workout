@@ -3,7 +3,7 @@
 ## Project Overview
 
 - Java algorithms practice project.
-- Java verfsion:
+- Java version: 25
 - Build tool: Gradle.
 - Source code: `src/main/java/com/podopryhora/algoworkout`.
 - Tests: `src/test/java/com/podopryhora/algoworkout` (JUnit 5).
@@ -14,8 +14,8 @@
 - Enforce Java 25 syntax and features.
 - Use ASCII only unless a file already contains Unicode.
 - Add short, meaningful comments at each key step in the algorithm.
-- Put algorithm/data-structure descriptions at class level.
-- Always include time and space complexity in class-level Javadoc.
+- Put algorithm/data-structure descriptions at class level Javadoc.
+- Always include time and space complexity in method-level comments.
 - Method Javadoc should stick to standard tags (`@param`, `@return`) unless there is a specific reason to add more.
 
 ## Testing

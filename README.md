@@ -94,7 +94,7 @@ Run tests with the Gradle wrapper:
 - [x] Two sum
 - [x] Palindrome Number
 
-#### Medium 
+#### Medium
 
 - [x] Longest Palindromic Substring
 

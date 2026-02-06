@@ -3,21 +3,21 @@ package com.podopryhora.algoworkout.ds;
 import java.util.Objects;
 
 /**
- * Doubly linked list is a data structure where each node has references to both previous and next nodes.
- * It supports bidirectional traversal and O(1) updates given a node reference.”
+ * Doubly linked list is a data structure where each node has references to both previous and next
+ * nodes. It supports bidirectional traversal and O(1) updates given a node reference.
  *
- * <p>Time complexity: add/remove at head or tail O(1), insert after a known node O(1),
- * remove a known node O(1), find by value or index O(n).
+ * <p>Time complexity: add/remove at head or tail O(1), insert after a known node O(1), remove a
+ * known node O(1), find by value or index O(n).
  *
  * <p>Space complexity: O(n) for n nodes, plus O(1) auxiliary space per operation.
  *
- * <p>Useful when frequent insertions/removals near the ends or around known nodes
- * are needed and bidirectional traversal is required.
+ * <p>Useful when frequent insertions/removals near the ends or around known nodes are needed and
+ * bidirectional traversal is required.
  */
 public class DoublyLinkedList<T> {
 
-  private Node head;
-  private Node tail;
+  private Node<T> head;
+  private Node<T> tail;
   private int size;
 
   public DoublyLinkedList() {
@@ -28,7 +28,7 @@ public class DoublyLinkedList<T> {
 
   // O(1)
   public void addFirst(T value) {
-    Node newNode = new Node(value, null, head);
+    Node<T> newNode = new Node<>(value, null, head);
     if (head == null) {
       tail = newNode;
     } else {
@@ -40,7 +40,7 @@ public class DoublyLinkedList<T> {
 
   // O(1)
   public void addLast(T value) {
-    Node newNode = new Node(value, tail, null);
+    Node<T> newNode = new Node<>(value, tail, null);
     if (tail == null) {
       head = newNode;
     } else {
@@ -83,8 +83,8 @@ public class DoublyLinkedList<T> {
   }
 
   // O(1)
-  public void insertAfter(Node node, T value) {
-    Node newNode = new Node(value, node, node.next);
+  public void insertAfter(Node<T> node, T value) {
+    Node<T> newNode = new Node<>(value, node, node.next);
     if (node.next == null) {
       tail = newNode;
     } else {
@@ -95,7 +95,7 @@ public class DoublyLinkedList<T> {
   }
 
   // O(1)
-  public void remove(Node node) {
+  public void remove(Node<T> node) {
     if (node.prev == null) {
       head = node.next;
     } else {
@@ -112,11 +112,11 @@ public class DoublyLinkedList<T> {
   }
 
   // O(n)
-  public Node get(int index) {
+  public Node<T> get(int index) {
     if (index < 0 || index > size - 1) {
       throw new IndexOutOfBoundsException();
     }
-    Node node = null;
+    Node<T> node;
     if (index < size / 2) {
       node = head;
       for (int i = 0; i < index; i++) {
@@ -132,8 +132,8 @@ public class DoublyLinkedList<T> {
   }
 
   // O(n)
-  public Node find(T value) {
-    Node currentNode = head;
+  public Node<T> find(T value) {
+    Node<T> currentNode = head;
     while (currentNode != null) {
       if (Objects.equals(value, currentNode.value)) {
         return currentNode;
@@ -143,13 +143,13 @@ public class DoublyLinkedList<T> {
     return null;
   }
 
-  public class Node {
+  public static class Node<T> {
 
     private final T value;
-    private Node prev;
-    private Node next;
+    private Node<T> prev;
+    private Node<T> next;
 
-    private Node(T value, Node prev, Node next) {
+    private Node(T value, Node<T> prev, Node<T> next) {
       this.value = value;
       this.prev = prev;
       this.next = next;

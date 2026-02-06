@@ -12,13 +12,16 @@ public class LongestPalindromicSubstring {
     if (s == null) {
       throw new IllegalArgumentException("Input must not be null");
     }
+
     int inputLength = s.length();
     if (inputLength < 1 || inputLength > 1000) {
       throw new IllegalArgumentException("Input length must be between 1 and 1000 chars");
     }
+
     if (inputLength == 1) {
       return s;
     }
+
     int bestStart = 0;
     int bestEnd = 0;
     // Iterate over each index as a potential palindrome center (O(n) centers).

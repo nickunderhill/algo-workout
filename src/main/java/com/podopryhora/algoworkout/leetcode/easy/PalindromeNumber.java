@@ -56,8 +56,8 @@ public class PalindromeNumber {
     String str = String.valueOf(x);
     int left = 0;
     int right = str.length() - 1;
-    // move inwards from the leftmost and the rightmost chars of the string until left and right are
-    // equals
+    // Move inwards from the leftmost and the rightmost chars of the string until left and right are
+    // equal
     while (left < right) {
       if (str.charAt(left) != str.charAt(right)) {
         return false;

@@ -7,7 +7,15 @@ package com.podopryhora.algoworkout.leetcode.med;
 public class LongestPalindromicSubstringNaive {
 
   public static String longestPalindrome(String s) {
+    if (s == null) {
+      throw new IllegalArgumentException("Input must not be null");
+    }
+
     int inputLength = s.length();
+    if (inputLength < 1 || inputLength > 1000) {
+      throw new IllegalArgumentException("Input length must be between 1 and 1000 chars");
+    }
+
     int bestStart = 0;
     int maxLength = 1;
     // Enumerate every substring start.
