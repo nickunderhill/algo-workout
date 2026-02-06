@@ -93,6 +93,7 @@ Run tests with the Gradle wrapper:
 
 - [x] Two sum
 - [x] Palindrome Number
+- [x] Fizz Buzz
 
 #### Medium
 
