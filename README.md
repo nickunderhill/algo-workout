@@ -96,6 +96,7 @@ Run tests with the Gradle wrapper:
 - [x] Fizz Buzz
 - [x] Array Shuffle
 - [x] Max Consecutive Ones
+- [x] Valid Palindrome
 
 #### Medium
 
