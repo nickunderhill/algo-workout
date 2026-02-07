@@ -101,6 +101,7 @@ Run tests with the Gradle wrapper:
 #### Medium
 
 - [x] Longest Palindromic Substring
+- [x] Add Two Numbers
 
 ## Example
 
