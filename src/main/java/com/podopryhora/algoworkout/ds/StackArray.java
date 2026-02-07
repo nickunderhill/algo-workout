@@ -13,7 +13,8 @@ public class StackArray<T> {
   private int top = -1;
 
   /**
-   * Creates a stack with the given fixed capacity. Time complexity: O(1). Space complexity: O(1).
+   * Creates a stack with the given fixed capacity.
+   * Time complexity: O(n) where n = capacity. Space complexity: O(n).
    *
    * @param capacity maximum number of elements the stack can hold
    */
