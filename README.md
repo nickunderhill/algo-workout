@@ -102,6 +102,7 @@ Run tests with the Gradle wrapper:
 
 - [x] Longest Palindromic Substring
 - [x] Add Two Numbers
+- [x] Longest Substring Without Repeating Characters
 
 ## Example
 
