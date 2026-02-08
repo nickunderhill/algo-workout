@@ -51,8 +51,8 @@ Run tests with the Gradle wrapper:
 - [ ] Arrays (custom dynamic array)
 - [ ] Singly linked list
 - [x] Doubly linked list
-- [ ] Stack (array + linked list)
-- [ ] Queue (array + linked list)
+- [x] Stack (array + linked list)
+- [x] Queue (array + linked list)
 - [ ] Deque
 - [ ] Hash table (separate chaining)
 - [ ] Hash table (open addressing)
