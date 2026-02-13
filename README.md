@@ -1,3 +1,5 @@
+![Tests](https://github.com/nickunderhill/algo-workout/actions/workflows/pr-tests.yml/badge.svg)
+
 # Algo Workout (Java)
 
 A focused Java workspace for practicing data structures and algorithms for coding interviews.
