@@ -70,6 +70,7 @@ Run tests with the Gradle wrapper:
 - [x] Binary search
 - [ ] Two pointers patterns
 - [ ] Sliding window
+- [ ] Fixed window
 - [ ] Prefix sum
 - [ ] Sorting: bubble, selection, insertion
 - [ ] Sorting: merge, quick, heap
@@ -77,6 +78,9 @@ Run tests with the Gradle wrapper:
 - [ ] Recursion patterns
 - [ ] LRU cache
 - [ ] Backtracking: subsets, permutations, combinations
+- [ ] Token Bucket Algorithm
+- [ ] Leaky Bucket Algorithm
+- [ ] Leaky Bucket Algorithm
 - [ ] Greedy: interval scheduling, activity selection
 - [ ] BFS / DFS
 - [ ] Topological sort

@@ -1,4 +1,4 @@
-package com.podopryhora.algoworkout.ds;
+package com.podopryhora.algoworkout.ds.stack;
 
 import java.util.EmptyStackException;
 
@@ -7,13 +7,13 @@ import java.util.EmptyStackException;
  *
  * @param <T> element type stored in the stack
  */
-public class StackLinkedList<T> {
+public class LinkedListStack<T> implements Stack<T> {
 
   private int size = 0;
   private Node<T> head;
 
   /** Creates an empty stack. Time complexity: O(1). Space complexity: O(1). */
-  public StackLinkedList() {
+  public LinkedListStack() {
     this.head = null;
   }
 
@@ -22,6 +22,7 @@ public class StackLinkedList<T> {
    *
    * @param x element to push
    */
+  @Override
   public void push(T x) {
     // Create a new node and link it ahead of the current head.
     Node<T> n = new Node<>(x);
@@ -37,6 +38,7 @@ public class StackLinkedList<T> {
    *
    * @return element at the top
    */
+  @Override
   public T pop() {
     // Guard against underflow.
     if (head == null) {
@@ -55,6 +57,7 @@ public class StackLinkedList<T> {
    *
    * @return element at the top
    */
+  @Override
   public T peek() {
     // Guard against underflow.
     if (isEmpty()) {
@@ -68,6 +71,7 @@ public class StackLinkedList<T> {
    *
    * @return true if the stack has no elements
    */
+  @Override
   public boolean isEmpty() {
     return head == null;
   }
@@ -77,6 +81,7 @@ public class StackLinkedList<T> {
    *
    * @return current size
    */
+  @Override
   public int size() {
     return size;
   }
