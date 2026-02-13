@@ -1,4 +1,4 @@
-package com.podopryhora.algoworkout.ds;
+package com.podopryhora.algoworkout.ds.stack;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.EmptyStackException;
 import org.junit.jupiter.api.Test;
 
-public class StackArrayTest {
+public class LinkedListStackTest {
 
   @Test
   void pushAndPopMaintainLifoOrder() {
-    StackArray<Integer> stack = new StackArray<>(3);
+    LinkedListStack<Integer> stack = new LinkedListStack<>();
 
     stack.push(1);
     stack.push(2);
@@ -27,7 +27,7 @@ public class StackArrayTest {
 
   @Test
   void peekReturnsTopWithoutRemoving() {
-    StackArray<String> stack = new StackArray<>(2);
+    LinkedListStack<String> stack = new LinkedListStack<>();
     stack.push("a");
     stack.push("b");
 
@@ -37,30 +37,21 @@ public class StackArrayTest {
 
   @Test
   void popThrowsWhenEmpty() {
-    StackArray<Integer> stack = new StackArray<>(1);
+    LinkedListStack<Integer> stack = new LinkedListStack<>();
 
     assertThrows(EmptyStackException.class, stack::pop);
   }
 
   @Test
   void peekThrowsWhenEmpty() {
-    StackArray<Integer> stack = new StackArray<>(1);
+    LinkedListStack<Integer> stack = new LinkedListStack<>();
 
     assertThrows(EmptyStackException.class, stack::peek);
   }
 
   @Test
-  void pushThrowsWhenFull() {
-    StackArray<Integer> stack = new StackArray<>(2);
-    stack.push(10);
-    stack.push(20);
-
-    assertThrows(IllegalStateException.class, () -> stack.push(30));
-  }
-
-  @Test
   void sizeTracksElementCount() {
-    StackArray<Integer> stack = new StackArray<>(3);
+    LinkedListStack<Integer> stack = new LinkedListStack<>();
     assertEquals(0, stack.size());
 
     stack.push(5);
@@ -75,7 +66,7 @@ public class StackArrayTest {
 
   @Test
   void isEmptyReflectsState() {
-    StackArray<Integer> stack = new StackArray<>(2);
+    LinkedListStack<Integer> stack = new LinkedListStack<>();
     assertTrue(stack.isEmpty());
 
     stack.push(1);
@@ -87,17 +78,11 @@ public class StackArrayTest {
 
   @Test
   void nullValuesAreAllowed() {
-    StackArray<String> stack = new StackArray<>(2);
+    LinkedListStack<String> stack = new LinkedListStack<>();
     stack.push(null);
 
     assertNull(stack.peek());
     assertNull(stack.pop());
     assertTrue(stack.isEmpty());
-  }
-
-  @Test
-  void constructorRejectsNonPositiveCapacity() {
-    assertThrows(IllegalArgumentException.class, () -> new StackArray<>(0));
-    assertThrows(IllegalArgumentException.class, () -> new StackArray<>(-1));
   }
 }

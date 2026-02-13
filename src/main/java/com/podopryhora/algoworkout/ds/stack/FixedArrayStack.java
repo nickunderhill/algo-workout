@@ -1,4 +1,4 @@
-package com.podopryhora.algoworkout.ds;
+package com.podopryhora.algoworkout.ds.stack;
 
 import java.util.EmptyStackException;
 
@@ -7,18 +7,18 @@ import java.util.EmptyStackException;
  *
  * @param <T> element type stored in the stack
  */
-public class StackArray<T> {
+public class FixedArrayStack<T> implements Stack<T> {
 
   private final Object[] arr;
   private int top = -1;
 
   /**
-   * Creates a stack with the given fixed capacity.
-   * Time complexity: O(n) where n = capacity. Space complexity: O(n).
+   * Creates a stack with the given fixed capacity. Time complexity: O(n) where n = capacity. Space
+   * complexity: O(n).
    *
    * @param capacity maximum number of elements the stack can hold
    */
-  public StackArray(int capacity) {
+  public FixedArrayStack(int capacity) {
     // Validate capacity to avoid invalid array creation.
     if (capacity < 1) {
       throw new IllegalArgumentException("StackArray minimum capacity is 1");
@@ -31,6 +31,7 @@ public class StackArray<T> {
    *
    * @param x element to push
    */
+  @Override
   public void push(T x) {
     // Guard against overflow in a fixed-capacity stack.
     if (top >= arr.length - 1) {
@@ -47,6 +48,7 @@ public class StackArray<T> {
    *
    * @return element at the top
    */
+  @Override
   public T pop() {
     // Guard against underflow.
     if (isEmpty()) {
@@ -65,6 +67,7 @@ public class StackArray<T> {
    *
    * @return element at the top
    */
+  @Override
   public T peek() {
     // Guard against underflow.
     if (top == -1) {
@@ -79,6 +82,7 @@ public class StackArray<T> {
    *
    * @return true if the stack has no elements
    */
+  @Override
   public boolean isEmpty() {
     return top == -1;
   }
@@ -88,6 +92,7 @@ public class StackArray<T> {
    *
    * @return current size
    */
+  @Override
   public int size() {
     return top + 1;
   }
@@ -103,4 +108,5 @@ public class StackArray<T> {
     // Cast is safe because only T instances are stored via push.
     return (T) arr[index];
   }
+
 }

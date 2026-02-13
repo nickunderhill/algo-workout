@@ -1,4 +1,4 @@
-package com.podopryhora.algoworkout.ds;
+package com.podopryhora.algoworkout.ds.stack;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.EmptyStackException;
 import org.junit.jupiter.api.Test;
 
-public class StackLinkedListTest {
+public class DynamicArrayStackTest {
 
   @Test
   void pushAndPopMaintainLifoOrder() {
-    StackLinkedList<Integer> stack = new StackLinkedList<>();
+    DynamicArrayStack<Integer> stack = new DynamicArrayStack<>(2);
 
     stack.push(1);
     stack.push(2);
@@ -27,7 +27,7 @@ public class StackLinkedListTest {
 
   @Test
   void peekReturnsTopWithoutRemoving() {
-    StackLinkedList<String> stack = new StackLinkedList<>();
+    DynamicArrayStack<String> stack = new DynamicArrayStack<>(2);
     stack.push("a");
     stack.push("b");
 
@@ -37,21 +37,21 @@ public class StackLinkedListTest {
 
   @Test
   void popThrowsWhenEmpty() {
-    StackLinkedList<Integer> stack = new StackLinkedList<>();
+    DynamicArrayStack<Integer> stack = new DynamicArrayStack<>(1);
 
     assertThrows(EmptyStackException.class, stack::pop);
   }
 
   @Test
   void peekThrowsWhenEmpty() {
-    StackLinkedList<Integer> stack = new StackLinkedList<>();
+    DynamicArrayStack<Integer> stack = new DynamicArrayStack<>(1);
 
     assertThrows(EmptyStackException.class, stack::peek);
   }
 
   @Test
   void sizeTracksElementCount() {
-    StackLinkedList<Integer> stack = new StackLinkedList<>();
+    DynamicArrayStack<Integer> stack = new DynamicArrayStack<>(2);
     assertEquals(0, stack.size());
 
     stack.push(5);
@@ -66,7 +66,7 @@ public class StackLinkedListTest {
 
   @Test
   void isEmptyReflectsState() {
-    StackLinkedList<Integer> stack = new StackLinkedList<>();
+    DynamicArrayStack<Integer> stack = new DynamicArrayStack<>(2);
     assertTrue(stack.isEmpty());
 
     stack.push(1);
@@ -78,11 +78,29 @@ public class StackLinkedListTest {
 
   @Test
   void nullValuesAreAllowed() {
-    StackLinkedList<String> stack = new StackLinkedList<>();
+    DynamicArrayStack<String> stack = new DynamicArrayStack<>(2);
     stack.push(null);
 
     assertNull(stack.peek());
     assertNull(stack.pop());
     assertTrue(stack.isEmpty());
+  }
+
+  @Test
+  void constructorRejectsNonPositiveCapacity() {
+    assertThrows(IllegalArgumentException.class, () -> new DynamicArrayStack<>(0));
+    assertThrows(IllegalArgumentException.class, () -> new DynamicArrayStack<>(-1));
+  }
+
+  @Test
+  void growsBeyondInitialCapacity() {
+    DynamicArrayStack<Integer> stack = new DynamicArrayStack<>(1);
+
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
+
+    assertEquals(3, stack.size());
+    assertEquals(30, stack.peek());
   }
 }
