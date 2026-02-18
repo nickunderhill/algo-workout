@@ -15,24 +15,8 @@ A focused Java workspace for practicing data structures and algorithms for codin
    │     └─ com/podopryhora/algoworkout
    │        ├─ App.java
    │        ├─ algorithms
-   │        │  ├─ arrays
-   │        │  ├─ backtracking
-   │        │  ├─ dp
-   │        │  ├─ graphs
-   │        │  ├─ greedy
-   │        │  ├─ math
-   │        │  ├─ search
-   │        │  ├─ sorting
-   │        │  └─ strings
-   │        └─ ds
-   │           ├─ arraylist
-   │           ├─ graph
-   │           ├─ hash
-   │           ├─ heap
-   │           ├─ linkedlist
-   │           ├─ stackqueue
-   │           ├─ tree
-   │           └─ trie
+   │        ├─ ds
+   │        └─ leetcode
    └─ test
       └─ java
          └─ com/podopryhora/algoworkout
@@ -56,6 +40,7 @@ Run tests with the Gradle wrapper:
 - [x] Stack (array + linked list)
 - [x] Queue (array + linked list)
 - [ ] Deque
+- [x] Hash map
 - [ ] Hash table (separate chaining)
 - [ ] Hash table (open addressing)
 - [ ] Binary heap (min/max)
@@ -81,7 +66,6 @@ Run tests with the Gradle wrapper:
 - [ ] LRU cache
 - [ ] Backtracking: subsets, permutations, combinations
 - [ ] Token Bucket Algorithm
-- [ ] Leaky Bucket Algorithm
 - [ ] Leaky Bucket Algorithm
 - [ ] Greedy: interval scheduling, activity selection
 - [ ] BFS / DFS
