@@ -22,6 +22,7 @@
 
 - Run tests with `./gradlew test` when changes affect behavior.
 - Typical focus: search/algorithm edge cases and null/empty inputs.
+- Use parameterized tests when practical.
 
 ## Notes for Agents
 
