@@ -3,6 +3,7 @@ name: Run Tests
 on:
   pull_request:
     branches: [ main ]
+    types: [ opened, synchronize, reopened ]
 
 permissions:
   contents: read
@@ -37,4 +38,3 @@ jobs:
         if: always()
         with:
           files: '**/build/test-results/test/*.xml'
-
