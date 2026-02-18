@@ -1,4 +1,4 @@
-package com.podopryhora.algoworkout.leetcode.easy;
+package com.podopryhora.algoworkout.leetcode.med;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

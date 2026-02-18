@@ -1,4 +1,4 @@
-package com.podopryhora.algoworkout.leetcode.easy;
+package com.podopryhora.algoworkout.leetcode.med;
 
 /**
  * You are given an integer array prices where prices[i] is the price of a given stock on the ith
