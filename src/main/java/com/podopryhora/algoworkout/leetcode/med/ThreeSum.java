@@ -36,7 +36,7 @@ public class ThreeSum {
       if (i > 0 && sorted[i] == sorted[i - 1]) {
         continue;
       }
-      // Since array is sorted, positive triplets can't sum to zero
+      // Since array is sorted, if the smallest element is positive, no triplets can sum to zero
       if (sorted[i] > 0) {
         break;
       }
