@@ -9,7 +9,7 @@ public class BestTimeToBuyAndSellStock {
    * @param prices stock prices by day
    * @return maximum achievable profit, or 0 if no profitable transaction exists
    */
-  public int maxProfit(int[] prices) {
+  public static int maxProfit(int[] prices) {
     if (prices == null || prices.length < 2) {
       return 0;
     }

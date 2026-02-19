@@ -26,7 +26,6 @@ class BestTimeToBuyAndSellStock4Test {
   @ParameterizedTest
   @MethodSource("provideInputsAndExpectedProfit")
   void maxProfitSuite(int k, int[] prices, int expectedProfit) {
-    BestTimeToBuyAndSellStock4 solver = new BestTimeToBuyAndSellStock4();
-    assertEquals(expectedProfit, solver.maxProfit(k, prices));
+    assertEquals(expectedProfit, BestTimeToBuyAndSellStock4.maxProfit(k, prices));
   }
 }

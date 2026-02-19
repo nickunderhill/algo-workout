@@ -24,7 +24,6 @@ class BestTimeToBuyAndSellStockWithCooldownTest {
   @ParameterizedTest
   @MethodSource("providePricesAndExpectedProfit")
   void maxProfitSuite(int[] prices, int expectedProfit) {
-    BestTimeToBuyAndSellStockWithCooldown solver = new BestTimeToBuyAndSellStockWithCooldown();
-    assertEquals(expectedProfit, solver.maxProfit(prices));
+    assertEquals(expectedProfit, BestTimeToBuyAndSellStockWithCooldown.maxProfit(prices));
   }
 }
