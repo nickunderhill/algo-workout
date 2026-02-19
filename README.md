@@ -87,6 +87,7 @@ Run tests with the Gradle wrapper:
 - [x] Array Shuffle
 - [x] Max Consecutive Ones
 - [x] Valid Palindrome
+- [x] Best Time to Buy and Sell Stock
 
 #### Medium
 
@@ -94,6 +95,13 @@ Run tests with the Gradle wrapper:
 - [x] Add Two Numbers
 - [x] Three Sum
 - [x] Longest Substring Without Repeating Characters
+- [x] Best Time to Buy and Sell Stock II
+
+#### Hard
+
+- [x] Best Time to Buy and Sell Stock III
+- [x] Best Time to Buy and Sell Stock IV
+- [x] Best Time to Buy and Sell Stock with Cooldown
 
 ## Example
 
