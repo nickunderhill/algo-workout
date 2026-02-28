@@ -39,6 +39,7 @@ Run tests with the Gradle wrapper:
 - [x] Doubly linked list
 - [x] Stack (array + linked list)
 - [x] Queue (array + linked list)
+- [x] Blocking queue (array + lock)
 - [ ] Deque
 - [x] Hash map
 - [ ] Hash table (separate chaining)
